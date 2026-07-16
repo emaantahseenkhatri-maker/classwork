@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #f8bad6;
+            background-color: #5c5b5b;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: #ff117c;
+            padding: 10px;
+            margin-bottom: 10px;
+            opacity: 0.6;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 50px;
+            right: 20px;
+            background-color: #f7569f;
+            padding: 10px;
+        }
+
+        .relative {
+            position: relative;
+            background-color: #ff117c;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #f7569f;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Positioning</h1>
+    <div>Content</div>
+    <div class="sticky">sticky Content <p>hi what's up? How are you? ufh
+
+
+
+            h</p>
+    </div>
+    <div class="fixed">fixed Content<p>
+    </div>
+    <div class="relative">relative Content
+        <p>hi what's up? How are you?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus, ipsum animi quos nesciunt, vitae
+            iste est cupiditate hic deleniti, voluptatibus ipsam nam itaque adipisci repellendus odit consectetur
+            expedita! Rerum.
+        </p>
+
+
+        <div class="absolute">absolute Content
+            <p>hi what's up? How are you?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, cupiditate! Quas voluptate
+                fugiat harum explicabo iste nulla laudantium perferendis, eveniet voluptas omnis? Necessitatibus, nulla
+                natus officiis impedit eligendi repellat ipsa?
+            </p>
+        </div>
+
+    </div>
+
+    <div style="z-index: 1; position: relative; background-color: #ff117c; padding: 10px; margin-top: 20px;">z-index
+        Content</div>
+
+    <div style="z-index: 2; position: relative; background-color: #ff117c; padding: 10px; margin-top: 20px;">z-index
+        Content</div>
+
+    <div style="z-index: 3; position: relative; background-color: #ff117c; padding: 10px; margin-top: 20px;">z-index
+        Content</div>
+
+    <div style="z-index: 4; position: relative; background-color: #ff117c; padding: 10px; margin-top: 20px;">z-index
+        Cont</div>
+</body>
+
+</html>
