@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malculations</title>
+</head>
+<body>
+    <h1>Malculations</h1>
+    <p>In this page, we will explore some functions related to Malculations so please be sure to check out the console for the results of the calculations.</p>
+        <p>right click on the page then press inspect then console to view the results!</p>
+    <script>
+
+        function sumOfTwoNumbers() {
+            let x, y, z;
+            x = 11;
+            y = 4;
+            z = x + y;
+            return z;
+        }
+        let sum = sumOfTwoNumbers();
+        console.log(`The sum of 11 and 4 is:` + sum);
+        
+        // hi
+        let oddorEven = function(num) {
+            if (num % 2 === 0) {
+              document.write(num + " is even.");
+            } else {
+                document.write(num + " is odd.");
+            }
+        }
+let number = prompt("Enter a number to check if it's odd or even:");
+oddorEven(number);
+
+    </script>
+</body>
+</html>
