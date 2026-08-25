@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Amazing Solar System</title>
+
+    <style>
+        .alert {
+            color: rgb(160, 203, 233);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            text-align: center;
+            font-style: italic;
+            text-decoration: underline;
+            background: rgb(13, 162, 236);
+            padding: 5px;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            text-align: center;
+            font-style: italic;
+            text-decoration:underline; ;
+        }
+
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            text-align: center;
+            font-style: italic;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">My Amazing Solar System</h1>
+    <p>Welcome to the My Amazing Solar System!</p>
+    <p>Explore the wonders of our cosmic neighborhood!</p>
+    <script>
+        let div = document.createElement("div");
+        div.id = "paragraph";
+        div.className = "alert";
+        div.innerHTML = "<p>Amazing Work!</p>";
+        document.body.append(div);
+
+        let heading = document.getElementById("heading");
+        heading.innerHTML = '&#128513;'
+
+        document.querySelector("p").innerHTML = "<strong>The Sun is the center of our solar system and provides the energy that sustains life on Earth which is located in the center of the solar system.</strong>";
+
+    </script>
+
+    <img class="card-img-top" src="Screenshot 2026-08-25 191859.png" alt="Planet 1" text-align: center;>
+    <img class="card-img-top" src="Screenshot 2026-08-25 191859.png" alt="Planet 1" text-align: center;>
+
+</body>
+
+</html>
