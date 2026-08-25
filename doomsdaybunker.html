@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoomsDay Bunker</title>
+
+    <style>
+        .alert {
+            color: rgb(222, 191, 237);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px; text-align: center;
+     font-style:italic; text-decoration:underline;
+            background: rgb(160, 17, 231);
+            padding: 5px;
+        }
+
+         h1{ font-family: 'Courier New', Courier, monospace; font-size: 30px; text-align: center;
+     font-style:italic; text-decoration:underline;}
+      p{ font-family: 'Courier New', Courier, monospace; font-size: 30px; text-align: center;
+     font-style:italic; text-decoration:underline;}
+    </style>
+</head>
+<body>
+    <h1 id="heading">DoomsDay Bunker</h1>
+    <p>Welcome to the DoomsDay Bunker!</p>
+    <p>Safe-t and securi-t</p>
+    <script>
+        let div = document.createElement("div");
+        div.id = "paragraph";
+        div.className = "alert";
+        div.innerHTML = "<p>Good Job!</p>";
+        document.body.append(div);
+
+        let heading = document.getElementById("heading");
+        heading.innerHTML ='&#128512;'
+
+        document.querySelector("p").innerHTML = "<strong>This is a safe place to be during a doomsday scenario. Please follow the rules and regulations to ensure your safety and the safety of others.</strong>";
+
+    </script>
+</body>
+</html>
