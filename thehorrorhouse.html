@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The horror HOUSE</title>
+    <style>
+        body {
+            background-color: rgb(215, 209, 209);
+            color: rgb(136, 12, 224);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .dark {
+            background-color: black;
+            color: rgb(0, 225, 255);
+        }
+
+        .textEntry {
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>The horror HOUSE</h1>
+    <p id = "story">Once upon a time, in a dark and eerie house, there lived a family...</p>
+    <button class="button" onclick="goDark()">Look Around</button>
+    <div class="textEntry"> Type your name here,if you dare: <input type="text" id="nameInput"></div>
+    <button class="button" onclick="typeAndScream()">If you click this, you'll scream!</button>
+    <button class="button" onclick="finishtheStory()">Finish the Story</button>
+
+    <script>
+        function goDark() {
+           var personname =document.getElementById("nameInput").value;
+           alert("You are in house full of ghosts , broken hopes and dreams , " + personname + " just scream or they will tie you down forever!");
+        }
+
+        function typeAndScream() {
+            document.body.className = "dark";
+        }
+
+        function finishtheStory() {
+           document.getElementById("story").innerHTML = "The family was trapped in the house, and they could hear strange noises coming from the walls. Suddenly, a ghostly figure appeared before them, and they screamed in terror!";
+        }
+    </script>
+</body>
+</html>
