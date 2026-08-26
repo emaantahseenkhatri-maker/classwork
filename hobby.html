@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My hobbies</title>
+    <style>
+        body {
+            background-color: rgb(120, 120, 120);
+            color: rgb(0, 255, 255);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .dark {
+            background-color: black;
+            color: rgb(191, 0, 255);
+        }
+
+        .textEntry {
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>My Hobbies</h1>
+    <p id = "story">Hey everyone! I have many hobbies that I love to do in my free time.</p>
+    <button class="button" onclick="goDark()">Spot The difference</button>
+    <div class="textEntry"> Try to guess my favorite hobby in your mind and please type your name at the end!? <input type="text" id="nameInput"></div>
+    <button class="button" onclick="typeAndScream()">which one do you prefer</button>
+    <button class="button" onclick="finishtheStory()">Finish the Story</button>
+
+    <script>
+        function goDark() {
+           var personname =document.getElementById("nameInput").value;
+           alert("If you guessed Art or Coding you are correct, " + personname + "Otherwise you are wrong!");
+        }
+
+        function typeAndScream() {
+            document.body.className = "dark";
+        }
+
+        function finishtheStory() {
+           document.getElementById("story").innerHTML = "Hey everyone! I have many hobbies that I love to do in my free time.I love to express my creativity through these  hobbies and also enjoy solving problems and building things through websites and games. These hobbies allow me to relax, learn new skills, and have fun! If you want to know what they are type your name in the box and click the button above to see if you guessed right!";
+        }
+    </script>
+</body>
+</html>
