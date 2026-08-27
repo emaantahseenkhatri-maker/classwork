@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textcolors</title>
+    <style>
+        #myElement {
+            color: black;
+            font-size: 16px;
+            font-family: "Times New Roman", Times, serif;
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Text Colors</h2>
+    <div id="myElement">Hello, World!</div>
+    <br>
+    <button type="button" onclick="changestyle()">Click me</button>
+
+    <script>
+    function changestyle()
+     {
+
+        var element = document.getElementById("myElement");
+         element.style.color = "lightcoral";
+        element.style.fontSize = "30px";
+        element.style.fontFamily = "Arial, sans-serif";
+        }
+   
+    </script>
+   
+</body>
+</html>
