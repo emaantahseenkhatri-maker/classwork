@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangles are not squares but squares are rectangles</title>
+    <style>
+        h2 {
+           text-align: center;
+        }
+
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(211, 131, 240);
+            margin: 20px auto;
+            border:1px solidblack;
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            margin: 20px auto;
+            border:1px solidblack;
+        }
+
+        .buttons {
+           
+           padding: 20px;
+           width: 200px;
+           margin:auto;
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lets make changes to the rectangles</h2>
+    <div class="rectangle"></div>
+    <div class="square"></div>
+
+    <div class="buttons">
+        <button onclick="createCircle()">Create Circle</button>
+        <button onclick="makeInvisible()">Invisible </button>
+        <button onclick="makeVisible()">Visible</button>
+        <button onclick="reverseRec()">Backspace</button>
+        <button onclick="changeColor()">Shapeshifter</button>
+        <button onclick="createsquare()">Surprise</button>
+    </div>
+
+    <script>
+        let div = document.querySelector('.rectangle');
+
+        function createCircle() {
+            var rectangle = document.querySelector('.rectangle');
+            rectangle.style.borderRadius = '50%';
+        }
+
+        function makeInvisible() {
+            var rectangle = document.querySelector('.rectangle');
+            rectangle.style.display = 'none';
+        }
+
+        function makeVisible() {
+            var rectangle = document.querySelector('.rectangle');
+            rectangle.style.display = 'block';
+        }
+
+        function reverseRec() {
+            var rectangle = document.querySelector('.rectangle');
+            rectangle.style.borderRadius = '0';
+           
+        }
+
+        function changeColor() {
+            var rectangle = document.querySelector('.rectangle');
+           var colors = ['red', 'lightblue', 'lightcoral', 'purple', 'goldenrod', 'orange', 'yellow', 'pink', 'lightgray'];
+            var currentColor = rectangle.style.backgroundColor;
+            var currentIndex = colors.indexOf(currentColor);
+            var nextIndex = (currentIndex + 1) % colors.length;
+            rectangle.style.backgroundColor = colors[nextIndex];
+        }
+
+        function createsquare() {
+            var rectangle = document.querySelector('.square');
+            rectangle.style.borderRadius = '0';
+            rectangle.style.width = '100px';
+            rectangle.style.height = '100px';
+             rectangle.style.backgroundColor = 'lightcoral';
+        }
+
+    </script>
+</body>
+</html>
