@@ -19,7 +19,6 @@
     display: none;
 }
 
-/* Each section takes full screen height */
 .hero,
 section {
     min-height: 100vh;
