@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do it by myself</title>
+    <link rel="stylesheet" href="style.css">
+    <span class="border-trans " font size=40px>
+
+        <centre>
+            welcome all to this website, this is a website that is made by me!
+        </centre>
+    </span>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Arial, Helvetica, sans-serif;
+            background-color: rgb(33, 33, 33);
+        }
+
+        .nav {
+            overflow: hidden;
+            background-color: rgb(46, 4, 80);
+        }
+
+        .nav a {
+            float: left;
+            display: block;
+            color: rgba(204, 0, 255, 0.826);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav a:hover {
+            background-color: rgb(3, 14, 27);
+            color: rgb(195, 30, 255);
+        }
+
+        .nav a.active {
+            background-color: rgb(4, 27, 43);
+            color: rgb(182, 37, 255);
+        }
+
+        .footer {
+
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(70, 4, 80);
+            color: rgba(204, 0, 255, 0.826);
+            text-align: center;
+            padding: 14px 16px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <a href="index.html">Home page</a>
+        <a href="thehorrorhouse.html">Spooky</a>
+        <a href="myportfolio/index.html">About me</a>
+        <a href="mathcalculation.html">numbers</a>
+        <a href="hoobbycrafts.html">Cute</a>`
+        <a href="doityourself.html">mushrooms</a>
+        <a href="trousers.html">Trousers</a>
+        <a href="FoodDiary.html">Food</a>
+    </div>
+
+
+    <div>
+
+        <section>
+
+
+            <img src="Screenshot 2026-07-22 202924.png" alt="Description of the image"
+                style="height: 700px; width: 100%;">
+            <img src="Screenshot 2026-07-22 202246.png" alt="Description of the image"
+                style="height: 700px; width: 100%;">
+            <img src="Screenshot 2026-07-22 203248.png" alt="Description of the image"
+                style="height: 700px; width: 100%;">
+        </section>
+        <section class="section section-dark">
+
+            <h2>Section Two</h2>
+            <p>This is the content for Section Two.This is where you can add more information about this section and
+                have more to say. </p>
+        </section>
+        <div class=pigm3>
+
+            <div class="ptext">
+                <span class="border trans">image two text</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByTagName("img");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <div class="footer">
+        <p>@ 2023 My Portfolio. All rights reserved.</p>
+
+    </div>
+</body>
+
+</html>
