@@ -1,3 +1,4 @@
+from secrets import choice
 import sys
 
 def initial_phonebook():
@@ -84,3 +85,88 @@ def search_existing(pb):
     if temp == 0:
         print("Contact not found.")
         return pb
+def delete_all(pb):
+    return pb.clear()
+
+def search_existing(pb):
+   choice = int(input("Search by:\n1. Name\n2. Number\n3. Email\n4. Date of Birth\n5. Category\nEnter your choice: "))
+   temp = []
+   check =-1
+   if choice == 1:
+     query = str(input("Please enter the name of the contact you wish to search for: "))
+     for i in range(len(pb)):
+        if query == pb[i][0]:
+            check = i
+            temp.append(pb[i])
+   elif choice == 2:
+     query = str(input("Please enter the number of the contact you wish to search for: "))
+     for i in range(len(pb)):
+       if query == pb[i][1]:
+            check = i
+            temp.append(pb[i])
+   elif choice == 3:
+     query = str(input("Please enter the email of the contact you wish to search for: "))
+     for i in range(len(pb)):
+       if query == pb[i][2]:
+            check = i
+            temp.append(pb[i])
+   elif choice == 4:
+     query = str(input("Please enter the date of birth of the contact you wish to search for: "))
+     for i in range(len(pb)):
+       if query == pb[i][3]:
+            check = i
+            temp.append(pb[i])
+
+   elif choice == 5:
+     query = str(input("Please enter the category of the contact you wish to search for: "))
+     for i in range(len(pb)):
+       if query == pb[i][4]:
+            check = i
+            temp.append(pb[i])
+
+   else:
+     print("Invalid choice.")
+     return -1
+
+   if check == -1:
+        return -1
+   else:
+        display_all(temp)
+        return check
+def display_all(pb):
+       if not pb:
+           print("List is empty.")
+           return
+       else:
+           for i in range(len(pb)):
+               print(pb[i])
+def thanks():
+   print( "********************************************************************")
+   print("Thank you for using our smartbook directory system.")
+   print("Please visit again.")
+   print("********************************************************************")   
+   sys.exit("Goodbye! Have a nice day!")
+
+   print(".................................................................................")
+   print("Hello dear user, welcome to the smartbook directory system.")
+   print ("You may now proceed to explore your dictionary")
+   print(".................................................................................")
+
+ch = 1
+pb = initial_phonebook()
+while ch in [1, 2, 3, 4, 5]:
+    ch = menu()
+    if ch == 1:
+        pb = add_contact(pb)
+    elif ch == 2:
+        pb = remove_existing(pb)
+    elif ch == 3:
+        pb = delete_all(pb)
+    elif ch == 4:
+        d =search_existing(pb)
+        if d ==-1:
+            print("Contact not found.")
+    elif ch == 5:
+       display_all(pb)
+    else:
+        thanks()
